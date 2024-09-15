@@ -18,6 +18,10 @@ variable "folder_id" {
   type        = string
   description = "The numeric ID of the folder this project belongs to. Changing this forces a new project to be created. Only one of org_id or folder_id may be specified. If the org_id is specified then the project is created at the top level. Changing this forces the project to be migrated to the newly specified organization."
 }
+variable "tags" {
+  type        = list(string)
+  description = "this will be used for tagging resources."
+}
 
 // optional variables
 variable "auto_create_network" {
